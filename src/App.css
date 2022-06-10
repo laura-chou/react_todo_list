@@ -1,0 +1,58 @@
+html,body {
+  height: 100%;
+  background:	#272727;
+}
+#root {
+  height: 100%;
+}
+.App {
+  height: 100%;
+  background:	#272727;
+  color: #fff
+}
+
+.App-logo {
+  height: 50px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+table tr th,
+table tr td {
+  text-align: center;
+  vertical-align: middle;
+  color:#fff;
+}
+table tr td:nth-child(1) {
+  width: 80%
+}
+table tr td:nth-child(2) {
+  width: 20%
+}
+table thead tr{
+ border-bottom: 2px solid #fff;
+}
+
+.trash,
+.times {
+  color: #F9F900;
+}
+
+.edit,
+.check {
+  color: #A8FF24;
+}

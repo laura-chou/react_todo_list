@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare, faTrash, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons'
 import logo from './logo.svg'
 import './App.css'
-import { Container, Row, Col, Button, Form, Table } from 'react-bootstrap';
+import { Container, Row, Col, Form, Table } from 'react-bootstrap';
 
 function App() {
   interface Items {
@@ -78,7 +78,8 @@ function App() {
         <Table className='mt-2' responsive>
           <thead>
             <tr>
-              <th colSpan={2}>Item</th>
+              <th>Item Name</th>
+              <th>Edit</th>
             </tr>
           </thead>
           <tbody>
@@ -91,12 +92,12 @@ function App() {
                 </td>
                 <td>
                   { (itemList[index]["edit"]) ? 
-                    <div className='d-flex justify-content-around'>
+                    <div>
                       <FontAwesomeIcon className='check' icon={faCheck} onClick={() => saveItem(index)}/>
                       <FontAwesomeIcon className='times' icon={faTimes} onClick={() => cancelItem(index)}/>
                     </div>
                     : 
-                    <div className='d-flex justify-content-around'>
+                    <div>
                       <FontAwesomeIcon className='edit' icon={faPenToSquare} onClick={() => editItem(index)}/>
                       <FontAwesomeIcon className='trash' icon={faTrash} onClick={() => deleteItem(index)}/>
                     </div>
